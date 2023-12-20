@@ -1,7 +1,7 @@
 "use client"
 import React, {useState, useEffect } from "react";
 import HeaderMenu from "../Utilities/HeaderMenu";
-import NimeList from "@/components/NimeList";
+import NimeList from "@/components/AnimeList";
 import Pagination from "../Utilities/Pagination";
 import Footer from "@/components/Dashboard/Footer";
 import { getAnimeResponse } from "@/libs/api-service";
@@ -22,7 +22,7 @@ const page = () => {
   return (
     <>
    <HeaderMenu title={`This Seasons #${page}`} />
-   <NimeList api={topAnime} />
+   <AnimeList api={topAnime} />
    <Pagination
     page={page} 
     lastPage={topAnime.pagination?.last_visible_page} 
